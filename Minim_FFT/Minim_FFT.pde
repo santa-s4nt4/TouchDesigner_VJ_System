@@ -60,8 +60,7 @@ void oscEvent(OscMessage msg) {
     osc = 0;
     } if(msg.checkAddrPattern("/push2")==true) {
       osc = 1;
-    } if(msg.checkAddrPattern("/push3")==true) {
-      osc = 2;
+      }
     }
   print("### received an osc message.");
   print(" addrpattern: "+msg.addrPattern());
@@ -119,33 +118,8 @@ void draw() {
       noStroke();
       fill(h, 80, 80, 7);
       ellipse(x,height/2,ellipseSize*2,ellipseSize*2);
-    }
-  } if(osc == 2) {
-    background(0);
-    noStroke();
-    // 画面の中心を基準点に
-    translate(width/2, height/2);
-    // FFT解析実行
-    fft.forward(in.mix);
-    // グラフで描画
-    for (int i = 0; i < fft.specSize (); i++) {
-      //float h = map(i, 0, fft.specSize(), 200, 180);
-      float h = map(i*12, fft.specSize(), 0, 0, 180);
-      float x = map(i, 0, fft.specSize(), 0, width*4.0);
-      // 回転速度とサイズをリスケール
-      float r = map(fft.getBand(i)*20, 0, 1.0, 0, 0.2);
-      float size = map(fft.getBand(i), 0, 1.0, 0.1, 0.5);
-      // FFT解析結果を角速度の配列に保存
-      rotSpeed[i] = r;
-      // 角速度だけ角度を変化して配列に保存
-      rot[i] += rotSpeed[i];
-      // 回転
-      rotate(radians(rot[i]/3));
-      // グラフを描画
-      fill(255,64);
-      fill(h*2, 80, 1000, 80);
-      rectMode(CENTER);
-      rect(x, h, width/10, height/30);
       }
+     }   
   }
+ }
 }
