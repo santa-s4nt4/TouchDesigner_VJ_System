@@ -29,7 +29,7 @@ Twitter: [@santa_sukitoku](https://twitter.com/santa_sukitoku)
 
 Portfolio: [Santa's Portfolio](https://sukitokuportfolio.wordpress.com/portfolio/)
 
-WebSite: [好きとは言ったが得意とは言ってない](https://santasukitoku.wordpress.com/)
+WebSite: [santa-sukitoku.github.io](https://santa-sukitoku.github.io/)
 
 ---
 
