@@ -8,9 +8,11 @@ TouchDesigner内で映像を3つ生成，Processingで生成した映像をTCPSy
 
 操作はTouchOSCを想定している．
 
+[詳細を記したBlog記事](https://sukitokuportfolio.wordpress.com/portfolio/visual-system-for-algorave-osaka/)
+
 ---
 
-## Audio Visual
+## Audio Device In
 
 TouchDesignerでAudio Device Inを使うとクラッシュするという不具合が多々あるので，sound_osc.toeを別のPCから起動し，マイクから入手した音をOSCでTD_VJ.toeに送信することで処理を分散している．
 
